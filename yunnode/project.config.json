@@ -1,0 +1,10 @@
+{
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wxb0ac69d4e2db360e",
+	"projectname": "yunnode",
+	"condition": {}
+}
