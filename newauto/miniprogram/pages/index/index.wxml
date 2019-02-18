@@ -1,0 +1,18 @@
+<!--miniprogram/cases/index1/index1.wxml-->
+<!-- <block wx:for="{{objectArray}}">
+<view>{{objectArray.id}}</view>
+  <view>{{objectArray.name}}</view>
+  <view>{{item}}</view>
+</block> -->
+<template name="cases">
+  <view>
+    <text >{{id}}: {{name}}</text>
+    <text class='result'>{{result}}</text>
+  </view>
+</template>
+<block wx:for="{{objectArray}}" wx:key="id">
+<view catchtap='c{{item.id}}' data-id='{{item.id}}'>
+<template is="cases" data="{{...item}}" />
+</view>
+</block>
+<view bindtap='test'>test</view>
