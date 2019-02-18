@@ -783,6 +783,17 @@ Page({
             this.setData({
               'objectArray[11].result': '通过'
             })
+            setTimeout(() => {
+              wx.closeSocket({
+                success:(res)=>{
+                  if(res.errMsg=="closeSocket:ok"){
+                    console.log('closesocket 通过')
+                  }else{
+                    console.log('closesocket 失败')
+                  }
+                }
+              })
+            }, 1000)
           } else {
             console.log('connectsocket  失败')
             this.setData({
@@ -807,6 +818,17 @@ Page({
             this.setData({
               'objectArray[11].result': '通过'
             })
+            setTimeout(() => {
+              wx.closeSocket({
+                success: (res) => {
+                  if (res.errMsg == "closeSocket:ok") {
+                    console.log('closesocket 通过')
+                  } else {
+                    console.log('closesocket 失败')
+                  }
+                }
+              })
+            }, 1000)
           } else {
             console.log('connectsocket  失败')
             this.setData({
@@ -833,6 +855,17 @@ Page({
             this.setData({
               'objectArray[12].result': '通过'
             })
+            setTimeout(() => {
+              wx.closeSocket({
+                success: (res) => {
+                  if (res.errMsg == "closeSocket:ok") {
+                    console.log('closesocket 通过')
+                  } else {
+                    console.log('closesocket 失败')
+                  }
+                }
+              })
+            }, 1000)
           } else {
             console.log('querytsocket  失败')
             this.setData({
@@ -857,6 +890,17 @@ Page({
             this.setData({
               'objectArray[12].result': '通过'
             })
+            setTimeout(() => {
+              wx.closeSocket({
+                success: (res) => {
+                  if (res.errMsg == "closeSocket:ok") {
+                    console.log('closesocket 通过')
+                  } else {
+                    console.log('closesocket 失败')
+                  }
+                }
+              })
+            }, 1000)
           } else {
             console.log('querytsocket  失败')
             this.setData({
@@ -884,6 +928,17 @@ Page({
             this.setData({
               'objectArray[13].result': '通过'
             })
+            setTimeout(() => {
+              wx.closeSocket({
+                success: (res) => {
+                  if (res.errMsg == "closeSocket:ok") {
+                    console.log('closesocket 通过')
+                  } else {
+                    console.log('closesocket 失败')
+                  }
+                }
+              })
+            }, 1000)
           } else {
             console.log('tcpNoDelaytSocket  失败')
             this.setData({
@@ -909,6 +964,17 @@ Page({
             this.setData({
               'objectArray[13].result': '通过'
             })
+            setTimeout(() => {
+              wx.closeSocket({
+                success: (res) => {
+                  if (res.errMsg == "closeSocket:ok") {
+                    console.log('closesocket 通过')
+                  } else {
+                    console.log('closesocket 失败')
+                  }
+                }
+              })
+            }, 1000)
           } else {
             console.log('tcpNoDelaytSocket  失败')
             this.setData({
@@ -935,6 +1001,17 @@ Page({
             this.setData({
               'objectArray[14].result': '通过'
             })
+            setTimeout(() => {
+              wx.closeSocket({
+                success: (res) => {
+                  if (res.errMsg == "closeSocket:ok") {
+                    console.log('closesocket 通过')
+                  } else {
+                    console.log('closesocket 失败')
+                  }
+                }
+              })
+            }, 1000)
           } else {
             console.log('stringSocket 失败')
             this.setData({
@@ -959,6 +1036,17 @@ Page({
             this.setData({
               'objectArray[14].result': '通过'
             })
+            setTimeout(() => {
+              wx.closeSocket({
+                success: (res) => {
+                  if (res.errMsg == "closeSocket:ok") {
+                    console.log('closesocket 通过')
+                  } else {
+                    console.log('closesocket 失败')
+                  }
+                }
+              })
+            }, 1000)
           } else {
             console.log('stringSocket 失败')
             this.setData({
@@ -1023,7 +1111,7 @@ console.log('huang')
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.c15()
+    this.c0()
   },
 
   /**
