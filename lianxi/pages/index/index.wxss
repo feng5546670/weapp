@@ -1,0 +1,6 @@
+/* pages/index/index.wxss */
+.loading{
+  text-align: center;
+  padding: 10rpx;
+  color: #ccc;
+}

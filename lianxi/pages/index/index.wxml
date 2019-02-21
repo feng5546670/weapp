@@ -1,0 +1,6 @@
+<input bindblur='blur'></input>
+<button bindtap='na'>查看缓存</button>
+<button bindtap="test">test</button>
+<view bindtap='jump' id='{{index}}' wx:for="{{data}}" wx:key="{{item.id}}">{{index+1}}：{{item.title}}</view>
+<view class='loading' hidden='{{!loadingMore}}'>正在加载更多</view>
+<view class='loading' hidden='{{!loadingOver}}'>已加载全部</view>

@@ -1,0 +1,5 @@
+<view wx:for="{{allDataList}}">
+<text>{{item.text}}</text>
+<text>{{item.name}}</text>
+<image src="{{item.bimageuri}}"></image>
+</view>

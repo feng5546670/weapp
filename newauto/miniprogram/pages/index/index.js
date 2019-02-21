@@ -793,7 +793,7 @@ Page({
                   }
                 }
               })
-            }, 1000)
+            }, 100)
           } else {
             console.log('connectsocket  失败')
             this.setData({
@@ -828,7 +828,7 @@ Page({
                   }
                 }
               })
-            }, 1000)
+            }, 100)
           } else {
             console.log('connectsocket  失败')
             this.setData({
@@ -865,7 +865,7 @@ Page({
                   }
                 }
               })
-            }, 1000)
+            }, 100)
           } else {
             console.log('querytsocket  失败')
             this.setData({
@@ -900,7 +900,7 @@ Page({
                   }
                 }
               })
-            }, 1000)
+            }, 100)
           } else {
             console.log('querytsocket  失败')
             this.setData({
@@ -938,7 +938,7 @@ Page({
                   }
                 }
               })
-            }, 1000)
+            }, 100)
           } else {
             console.log('tcpNoDelaytSocket  失败')
             this.setData({
@@ -974,7 +974,7 @@ Page({
                   }
                 }
               })
-            }, 1000)
+            }, 100)
           } else {
             console.log('tcpNoDelaytSocket  失败')
             this.setData({
@@ -1011,7 +1011,7 @@ Page({
                   }
                 }
               })
-            }, 1000)
+            }, 100)
           } else {
             console.log('stringSocket 失败')
             this.setData({
@@ -1046,7 +1046,7 @@ Page({
                   }
                 }
               })
-            }, 1000)
+            }, 100)
           } else {
             console.log('stringSocket 失败')
             this.setData({
@@ -1094,7 +1094,7 @@ Page({
           clearTimeout(timer15)
           setTimeout(() => {
             this.test()
-          }, 1000)
+          }, 100)
         }
       })
     }
@@ -1111,7 +1111,7 @@ console.log('huang')
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.c0()
+    // this.c0()
   },
 
   /**
