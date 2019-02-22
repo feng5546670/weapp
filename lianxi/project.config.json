@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -50,6 +50,20 @@
 					"id": -1,
 					"name": "test",
 					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "swithctab",
+					"pathName": "pages/switchtab/switchtab",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shuju",
+					"pathName": "pages/shuju/shuju",
 					"scene": null
 				}
 			]

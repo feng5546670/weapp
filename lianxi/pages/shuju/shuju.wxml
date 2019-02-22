@@ -1,0 +1,21 @@
+<!--pages/shuju/shuju.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view>
+    <view>姓名</view>
+    <input id='1' name="input" placeholder="please input here" />
+  </view>
+  <!-- <view>
+    <view>手机号</view>
+    <input id='2' name="input" placeholder="please input here" />
+  </view>
+  <view >
+    <view>地址</view>
+    <input id='3' name="input" placeholder="please input here" />
+  </view> -->
+    <view>
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>
+<view bindtap='add'>添加数据</view>
+<view bindtap='cha'>查询数据</view>

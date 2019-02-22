@@ -1,0 +1,36 @@
+<view class="top-tab">
+  <view class="top-tab-item {{currentTopItem==idx ? 'active' : ''}}" wx:for="{{topTabItems}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="switchTab" wx:key="idx">
+    {{item}}
+  </view>
+</view>
+
+<!-- <swiper class="swiper" current="{{currentTopItem}}" bindchange="bindChange" duration="300" style="height:{{swiperHeight}}px" > -->
+<swiper class="swiper" current="{{currentTopItem}}">
+
+  <!--全部-->
+  <swiper-item>
+  <view>全部</view>
+  </swiper-item>
+
+  <!--视频-->
+  <swiper-item>
+  <view>视频</view>
+  </swiper-item>
+
+  <!--图片-->
+  <swiper-item>
+  <view>图片</view>
+  <image src='cloud://hartfeng-d1e6c9.hartfeng-d1e6c9/0e634e975705a6326a8ae7fc833760c7.jpg'></image>
+  </swiper-item>
+
+  <!--段子-->
+  <swiper-item>
+  <view>段子</view>
+  </swiper-item>
+
+  <!--声音-->
+  <swiper-item>
+  <view>声音</view>
+  </swiper-item>
+
+</swiper>
