@@ -1,0 +1,33 @@
+/* pages/my/my.wxss */
+.mynews{
+  width:100%;
+  height: 400rpx;
+  background-color: #40E0D0;
+}
+.shezhi{
+  width:60rpx;
+  height:60rpx;
+  margin-left: 650rpx;
+  margin-top: 20rpx;
+}
+.login{
+  width:150rpx;
+  margin-left: 80rpx;
+  margin-top:-50rpx;
+  border-radius: 15%;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  /* margin: 20rpx; */
+    margin-top:-50rpx;
+    margin-left: 60rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

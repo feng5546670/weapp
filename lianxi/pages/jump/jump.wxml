@@ -1,0 +1,7 @@
+<!--pages/jump/jump.wxml-->
+<!-- <image src='{{data.img}}'></image> -->
+<view class='content'>
+<view class='title'>{{data.title}}</view>
+<view class='text'>{{data.text}}</view>
+<view class='ct'>{{data.ct}}</view>
+</view>

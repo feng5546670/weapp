@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/storage/storage",
+    "pages/jump/jump",
+    "pages/baisi/baisi",
+    "pages/test/test",
+    "pages/switchtab/switchtab",
+    "pages/shuju/shuju"
+  ]
+}

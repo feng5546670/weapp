@@ -1,0 +1,38 @@
+/* pages/index/index.wxss */
+.bannerts{
+  height: 600rpx
+}
+.banner{
+    width: 100%;
+    height: 411rpx;
+}
+.images{
+  width: 100%;
+  height: 550rpx;
+}
+.funcs{
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 20rpx 0 0rpx 0;
+}
+.funcs .func{
+    width: 25%;
+    text-align: center;
+    margin-bottom: 30rpx;
+}
+.funcs .func image{
+    width: 100rpx;
+    height: 100rpx;
+  text-align: center;
+
+}
+.funcs .func .name{
+    text-align: center;
+    color: #666666;
+    font-size: 26rpx;
+    margin-top: 10rpx;
+}
