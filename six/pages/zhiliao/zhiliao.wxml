@@ -1,0 +1,7 @@
+<!--pages/zhiliao/zhiliao.wxml-->
+<view>头像:</view>
+<image src='{{touxiang}}'></image>
+<view>昵称:{{name}}</view>
+<view wx:if="{{sex==0}}">性别:女</view>
+<view wx:else>性别:男</view>
+<view>注册时间:{{time}}</view>

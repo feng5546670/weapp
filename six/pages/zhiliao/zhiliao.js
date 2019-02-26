@@ -1,4 +1,4 @@
-// pages/my/my.js
+// pages/zhiliao/zhiliao.js
 const app = getApp()
 Page({
 
@@ -6,44 +6,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hasUserInfo: false,
+      touxiang:'',
+      name:'',
+      sex:'',
+      time:'2019-02-28'
   },
-  getUserInfo:function(e){
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-    wx.setStorage({
-      key: 'userInfo',
-      data: e.detail.userInfo
-    })
-  },
-  shezhi:function(){
-    wx.navigateTo({
-      url: '/pages/zhiliao/zhiliao',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     if (app.globalData.userInfo) {
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        touxiang: app.globalData.userInfo.avatarUrl,
+        name: app.globalData.userInfo.nickName,
+        sex: app.globalData.userInfo.gender
       })
-    }else{
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    } 
+    // else {
+    //   wx.getUserInfo({
+    //     success: res => {
+    //       app.globalData.userInfo = res.userInfo
+    //       this.setData({
+    //         touxiang: app.globalData.userInfo.avatarUrl,
+    //         name: app.globalData.userInfo.nickName,
+    //         sex: app.globalData.userInfo.gender
+    //       })
+    //       console.log(res)
+    //     }
+    //   })
+    // }
   },
 
   /**

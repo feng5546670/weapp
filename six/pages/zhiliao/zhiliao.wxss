@@ -1,0 +1,8 @@
+/* pages/zhiliao/zhiliao.wxss */
+image{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin-left: 600rpx;
+  margin-top:-30rpx;
+}
