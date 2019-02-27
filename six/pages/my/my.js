@@ -24,6 +24,21 @@ Page({
       url: '/pages/zhiliao/zhiliao',
     })
   },
+  weixiu:function(){
+    wx.navigateTo({
+      url: '/pages/weixiu/weixiu',
+    })
+  },
+  q1:function(){
+    wx.navigateTo({
+      url: '/pages/dingdan/dingdan',
+    })
+  },
+  q3:function(){
+    wx.navigateTo({
+      url: '/pages/cyxx/cyxx',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

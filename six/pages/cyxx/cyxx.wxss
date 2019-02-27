@@ -1,0 +1,14 @@
+/* pages/cyxx/cyxx.wxss */
+.t1{
+  padding: 15rpx;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  margin-top: 30rpx;
+  background: #40E0D0;
+  border-radius: 40rpx;
+}
+.t2{
+  display: inline;
+  font-size: 45rpx;
+}

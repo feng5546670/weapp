@@ -1,0 +1,3 @@
+<!--pages/cyxx/cyxx.wxml-->
+<view class='t1' bindtap='tjdz'><view class='t2'>+</view>
+添加地址</view>

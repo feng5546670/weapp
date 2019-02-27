@@ -1,7 +1,7 @@
 /* pages/my/my.wxss */
 .mynews{
   width:100%;
-  height: 400rpx;
+  height: 350rpx;
   background-color: #40E0D0;
 }
 .shezhi{
@@ -16,18 +16,97 @@
   margin-top:-50rpx;
   border-radius: 15%;
 }
-.userinfo-avatar {
+.yfxx{
+  height: 128rpx;
+  display: flex;
+  align-items: center;
+   margin-top:-50rpx;
+}
+.userinfo-avatar{
   width: 128rpx;
   height: 128rpx;
-  /* margin: 20rpx; */
-    margin-top:-50rpx;
-    margin-left: 60rpx;
+  margin-left: 60rpx;
   border-radius: 50%;
 }
 .userinfo-nickname {
   color: #aaa;
+  display: inline;
+  margin-left: 15rpx;
+  font-size: 28rpx;
 }
 
 .usermotto {
   margin-top: 200px;
+}
+.zongwei{
+  margin: auto;
+  width: 90%;
+  height: 280rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  margin-top:30rpx;
+}
+.weixiu{
+  display: flex;
+  align-items: center;
+  margin:0rpx 20rpx ;
+  padding: 20rpx 0rpx;
+  border-bottom:1rpx solid #abcdef;
+  justify-content: space-between;
+}
+.chakan{
+
+  color: #ccc;
+  font-size: 30rpx;
+}
+page{
+  background-color: #F5F5F5;
+}
+.ims{
+    width: 100%;
+    display: flex;
+    margin-top: 30rpx;
+}
+.ims .im{
+      width: 25%;
+    text-align: center;
+}
+.ims .im image{
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+
+}
+.ims .im .imn{
+    text-align: center;
+    color: #666666;
+    font-size: 28rpx;
+    /* margin-top: 10rpx; */
+}
+.fns{
+  margin-top: 160rpx;
+}
+.fn{
+height: 65rpx;
+/* width: 100%; */
+margin: 0rpx 40rpx;
+display: flex;
+align-items: center;
+padding: 20rpx 0;
+border-bottom: 1rpx solid #abcdef;
+}
+.fn .im1{
+  height: 50rpx;
+  width: 50rpx;
+}
+.fn .fnn{
+  display: inline;
+  font-size: 33rpx;
+  margin-left: 20rpx;
+}
+.fn .im2{
+  height: 25rpx;
+  width: 20rpx;
+  position:absolute;
+  right:25px;
 }

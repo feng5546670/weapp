@@ -16,7 +16,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
     padding: 20rpx 0 0rpx 0;
 }
 .funcs .func{
@@ -28,7 +27,6 @@
     width: 100rpx;
     height: 100rpx;
   text-align: center;
-
 }
 .funcs .func .name{
     text-align: center;

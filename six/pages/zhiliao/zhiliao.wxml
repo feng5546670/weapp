@@ -1,7 +1,16 @@
 <!--pages/zhiliao/zhiliao.wxml-->
+<view class='txs'>
 <view>头像:</view>
 <image src='{{touxiang}}'></image>
-<view>昵称:{{name}}</view>
-<view wx:if="{{sex==0}}">性别:女</view>
-<view wx:else>性别:男</view>
-<view>注册时间:{{time}}</view>
+</view>
+
+<view class='ncs'>昵称:
+<view class='nc'>{{name}}</view>  
+</view>
+
+<view wx:if="{{sex==0}}" class='ncs'>性别: <view class='nc'>女</view>  </view>
+<view wx:else class='ncs'>性别: <view class='nc'>男</view> </view>
+
+<view class='ncs'>注册时间:
+<view class='nc'>{{time}}</view>  
+</view>

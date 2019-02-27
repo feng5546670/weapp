@@ -2,7 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/my/my",
-    "pages/zhiliao/zhiliao"
+    "pages/zhiliao/zhiliao",
+    "pages/weixiu/weixiu",
+    "pages/dingdan/dingdan",
+    "pages/cyxx/cyxx",
+    "pages/bjdz/bjdz"
   ],
   "window": {
     "navigationBarBackgroundColor": "#40E0D0",

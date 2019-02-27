@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -49,6 +49,27 @@
 					"id": -1,
 					"name": "zhiliao",
 					"pathName": "pages/zhiliao/zhiliao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "weixiu",
+					"pathName": "pages/weixiu/weixiu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cyxx",
+					"pathName": "pages/cyxx/cyxx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "bjdz",
+					"pathName": "pages/bjdz/bjdz",
 					"scene": null
 				}
 			]

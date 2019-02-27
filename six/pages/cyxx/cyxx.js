@@ -1,41 +1,22 @@
-// pages/zhiliao/zhiliao.js
-const app = getApp()
+// pages/cyxx/cyxx.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      touxiang:'',
-      name:'',
-      sex:'',
-      time:'2019-02-28'
-  },
 
+  },
+  tjdz:function(){
+    wx.navigateTo({
+      url: '/pages/bjdz/bjdz',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.userInfo) {
-      this.setData({
-        touxiang: app.globalData.userInfo.avatarUrl,
-        name: app.globalData.userInfo.nickName,
-        sex: app.globalData.userInfo.gender
-      })
-    } 
-    else {
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            touxiang: app.globalData.userInfo.avatarUrl,
-            name: app.globalData.userInfo.nickName,
-            sex: app.globalData.userInfo.gender
-          })
-          console.log(res)
-        }
-      })
-    }
+
   },
 
   /**

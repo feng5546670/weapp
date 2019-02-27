@@ -1,0 +1,23 @@
+<!--pages/bjdz/bjdz.wxml-->
+<view class='bjs'>
+<view class='bj'> <text>联系人</text> 
+<input name='username' placeholder="您的名字"></input>
+</view>
+
+<view class='bj'><text space="emsp">电 话</text> <input name='phone' placeholder="您的电话"></input>
+</view>
+
+
+<view class='bj'><text space="emsp">地 区</text>
+
+</view>
+
+
+
+
+
+
+
+
+
+</view>

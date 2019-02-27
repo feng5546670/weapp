@@ -1,0 +1,6 @@
+/* pages/weixiu/weixiu.wxss */
+.jilu{
+  text-align: center;
+  font-size: 30rpx;
+  background-color:#F8F8FF;
+}

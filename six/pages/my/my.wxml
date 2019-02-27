@@ -1,11 +1,101 @@
 <!--pages/my/my.wxml-->
 <view class='mynews'>
-<image src='/images/i01.png' class='shezhi' bindtap='shezhi'></image>
-<view>
-<button wx:if="{{!hasUserInfo}}" class='login' open-type='getUserInfo' bindgetuserinfo="getUserInfo">登录</button>
+  <image src='/images/i01.png' class='shezhi' bindtap='shezhi'></image>
+  <view>
+    <button wx:if="{{!hasUserInfo}}" class='login' open-type='getUserInfo' bindgetuserinfo="getUserInfo">登录</button>
     <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class='yfxx'>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+    </view>
     </block>
+    <view class='zongwei'>
+      <view class='weixiu' bindtap='weixiu'>维修记录
+        <view class='chakan'>查看更多</view>
+      </view>
+      <view class='ims'>
+      <view class='im' bindtap='weixiu'>
+      <image src='/images/i01.png'></image>
+      <view class='imn'>待接单</view>
+      </view>
+
+      <view class='im' bindtap='weixiu'>
+      <image src='/images/i02.png'></image>
+      <view class='imn'>进行中</view>
+      </view>
+
+      <view class='im' bindtap='weixiu'>
+      <image src='/images/i03.png'></image>
+      <view class='imn'>已完成</view>
+      </view>
+      <view class='im' bindtap='weixiu'>
+      <image src='/images/i04.png'></image>
+      <view class='imn'>已取消</view>
+      </view>
+      <view></view>
+      </view>
+    </view>
+  </view>
 </view>
+<view class='fns'>
+<view class='fn' bindtap='q1'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>全部订单</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q2'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>优惠券</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q3'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>常用作息</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q4'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>下单流程</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q5'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>费用说明</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q6'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>常见问题</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q1'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>问题反馈</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q1'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>在线客服</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q1'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>关于我们</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
+<view class='fn' bindtap='q1'>
+<image src='/images/i01.png' class='im1'></image>
+<view class='fnn'>切换账号</view>
+<image src='/images/right.png' class='im2'></image>
+</view>
+
 </view>
