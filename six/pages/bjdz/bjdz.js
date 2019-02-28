@@ -1,18 +1,40 @@
 // pages/bjdz/bjdz.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    region: ['请选择', '请选择', '请选择'],
   },
-
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  formSubmit: function (e) {
+    console.log(e.detail.value)
+    const db=wx.cloud.database()
+    db.collection('userdata').add({
+      data:{
+        name:e.detail.value.username,
+        phone: e.detail.value.phone,
+        address: e.detail.value.picker + e.detail.value.textarea,
+      },
+      success:(res)=>{
+        console.log(res)
+        wx.navigateTo({
+          url: '/pages/cyxx/cyxx',
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

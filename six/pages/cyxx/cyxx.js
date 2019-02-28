@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    username:'黄巍峰',
+    phone:'18589080157',
+    address:'广东省,广州市,海珠区客村TIT创意园微信总部b4'
   },
   tjdz:function(){
     wx.navigateTo({

@@ -1,4 +1,13 @@
 /* pages/cyxx/cyxx.wxss */
+.un{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30rpx 40rpx;
+}
+
+
+
 .t1{
   padding: 15rpx;
   margin: auto;

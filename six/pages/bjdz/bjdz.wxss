@@ -8,13 +8,33 @@ page{
 }
 .bj{
   display: flex;
-
-  flex-wrap: wrap;
   margin: 0rpx 40rpx;
   padding: 25rpx 0rpx;
   border-bottom: 1rpx solid #abcdef;
   align-items: center;
 }
-input{
-margin-left: 50rpx;
+.bj input{
+  margin-left: 50rpx;
+}
+.picker{
+  margin-left: 50rpx;
+}
+.xx{
+  display: flex;
+  width: 100%;
+  margin: 0rpx 40rpx;
+  padding: 25rpx 0rpx;
+}
+.xxdz{
+  margin-left: 30rpx;
+  width: 500rpx;
+}
+.t1{
+  padding: 15rpx;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  margin-top: 30rpx;
+  background: #40E0D0;
+  border-radius: 40rpx;
 }

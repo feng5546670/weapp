@@ -1,3 +1,9 @@
 <!--pages/cyxx/cyxx.wxml-->
+<view class='un'>{{username}} 
+<view class='us'>{{phone}}</view>
+</view>
+
+
+
 <view class='t1' bindtap='tjdz'><view class='t2'>+</view>
 添加地址</view>

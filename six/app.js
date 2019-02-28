@@ -4,7 +4,13 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-
+    if (!wx.cloud) {
+      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
+    } else {
+      wx.cloud.init({
+        traceUser: true,
+      })
+    }
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -27,7 +33,8 @@ App({
 
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    openid:''
   },
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
