@@ -9,19 +9,19 @@ Page({
     region: ['请选择', '请选择', '请选择'],
   },
   bindRegionChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    // console.log('picker发送选择改变，携带值为', e.detail.value[0] + e.detail.value[1] + e.detail.value[2])
     this.setData({
       region: e.detail.value
     })
   },
   formSubmit: function (e) {
-    console.log(e.detail.value)
+    console.log(e.detail.value.picker)
     const db=wx.cloud.database()
     db.collection('userdata').add({
       data:{
         name:e.detail.value.username,
         phone: e.detail.value.phone,
-        address: e.detail.value.picker + e.detail.value.textarea,
+        address: e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea,
       },
       success:(res)=>{
         console.log(res)

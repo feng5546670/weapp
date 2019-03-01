@@ -1,12 +1,46 @@
 /* pages/cyxx/cyxx.wxss */
+page{
+   background-color: #F5F5F5;
+}
+.zu{
+  height: 400rpx;
+  background-color: white;
+}
 .un{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30rpx 40rpx;
+  padding: 30rpx 40rpx;
+}
+.ad{
+  margin: 0 40rpx; 
+  color:#2F4F4F;
+  padding-bottom: 40rpx;
+  border-bottom: 3rpx solid #abcdef;
 }
 
-
+.cd{
+  display: flex;
+  margin: 30rpx 40rpx;
+  align-items: center;
+}
+.mr{
+  display: flex;
+  align-items: center;
+}
+.bj{
+    display: flex;
+  align-items: center;
+}
+.de{
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.cd image{
+  height: 50rpx;
+  width: 50rpx;
+}
 
 .t1{
   padding: 15rpx;

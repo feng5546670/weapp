@@ -7,12 +7,17 @@ Page({
   data: {
     username:'黄巍峰',
     phone:'18589080157',
-    address:'广东省,广州市,海珠区客村TIT创意园微信总部b4'
+    address:'广东省广州市海珠区客村TIT创意园微信总部b4'
   },
   tjdz:function(){
     wx.navigateTo({
       url: '/pages/bjdz/bjdz',
     })
+    // wx.chooseAddress({
+    //   success: function (res) {
+    //     console.log(res)
+    //   }
+    // })
   },
   /**
    * 生命周期函数--监听页面加载
