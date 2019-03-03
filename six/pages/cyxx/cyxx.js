@@ -5,11 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username:'黄巍峰',
-    phone:'18589080157',
-    address:'广东省广州市海珠区客村TIT创意园微信总部b4'
+    userxx: [{
+      id:1,
+      username: '黄巍峰',
+      phone: '18589080157',
+      address: '广东省广州市海珠区客村TIT创意园微信总部b4'
+    },
+    {
+      id:2,
+      username: '黄巍峰',
+      phone: '18589080157',
+      address: '广东省广州市海珠区客村TIT创意园微信总部b4'
+    },
+      {
+        id:3,
+        username: '黄巍峰',
+        phone: '18589080157',
+        address: '广东省广州市海珠区客村TIT创意园微信总部b4'
+      },
+      {
+        id:4,
+        username: '黄巍峰',
+        phone: '18589080157',
+        address: '广东省广州市海珠区客村TIT创意园微信总部b4'
+      }
+    ]
   },
-  tjdz:function(){
+  bj:function(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/bjdz/bjdz',
+    })
+  },
+  Tap:function(e){
+    console.log("Tap",e)
+  },
+  tjdz:function(e){
+
     wx.navigateTo({
       url: '/pages/bjdz/bjdz',
     })

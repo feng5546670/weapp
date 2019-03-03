@@ -1,0 +1,21 @@
+<template name="cyxxItem">
+<view class='zu'>
+<view class='un'>{{username}} 
+<view class='us'>{{phone}}</view>
+</view>
+<view class='ad'>{{address}}</view>
+
+<view class='cd'>
+<view class='mr'>
+<image src='/images/i01.png'></image>
+默认
+</view>
+<view class='bj' bindtap='bj'>
+<image src='/images/i01.png'></image>
+编辑</view>
+<view class='de'>
+<image src='/images/i01.png'></image>
+删除</view>
+</view>
+</view>
+</template>

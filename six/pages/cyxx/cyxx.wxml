@@ -1,27 +1,14 @@
 <!--pages/cyxx/cyxx.wxml-->
-<view class='zu'>
-<view class='un'>{{username}} 
-<view class='us'>{{phone}}</view>
-</view>
-<view class='ad'>{{address}}</view>
+<import src="/pages/cyxx-item/cyxx-item.wxml"/>
 
-<view class='cd'>
-<view class='mr'>
-<image src='/images/i01.png'></image>
-默认
+<block wx:for="{{userxx}}" wx:for-item="item" wx:for-index="idx" wx:key="item.index">
+<view  catchtap="Tap" data-id='{{item.id}}'>
+<template is="cyxxItem" data="{{...item}}"/>
 </view>
-<view class='bj'>
-<image src='/images/i01.png'></image>
-编辑</view>
-<view class='de'>
-<image src='/images/i01.png'></image>
-删除</view>
-</view>
-
-
-</view>
-
+</block>
 
 
 <view class='t1' bindtap='tjdz'><view class='t2'>+</view>
 添加地址</view>
+
+<view class='bot'></view>
