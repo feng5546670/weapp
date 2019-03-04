@@ -5,26 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userxx: [{
-      id:1,
-      username: '黄巍峰',
-      phone: '18589080157',
-      address: '广东省广州市海珠区客村TIT创意园微信总部b4'
-    },
-    {
-      id:2,
-      username: '黄巍峰',
-      phone: '18589080157',
-      address: '广东省广州市海珠区客村TIT创意园微信总部b4'
-    },
+    userxx:[
       {
-        id:3,
-        username: '黄巍峰',
-        phone: '18589080157',
-        address: '广东省广州市海珠区客村TIT创意园微信总部b4'
-      },
-      {
-        id:4,
         username: '黄巍峰',
         phone: '18589080157',
         address: '广东省广州市海珠区客村TIT创意园微信总部b4'
@@ -55,7 +37,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var data = JSON.parse(options.data)
+    // this.setData({
+    //   userxx:data
+    // })
+    let userxx=this.data.username
+    userxx.unshift(data)
   },
 
   /**
