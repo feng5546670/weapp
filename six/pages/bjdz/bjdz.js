@@ -7,8 +7,8 @@ Page({
    */
   data: {
     region: ['请选择', '请选择', '请选择'],
-    userxx:[
-    ]
+    userxx:{
+    }
   },
   bindRegionChange: function (e) {
     // console.log('picker发送选择改变，携带值为', e.detail.value[0] + e.detail.value[1] + e.detail.value[2])
@@ -34,9 +34,9 @@ Page({
     // })
     // var username = "userxx[" + 0 + "].username";
     this.setData({
-      'userxx[0].username':e.detail.value.username,
-      'userxx[0].phone':e.detail.value.phone,
-      'userxx[0].address': e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea
+      'userxx.username':e.detail.value.username,
+      'userxx.phone':e.detail.value.phone,
+      'userxx.address': e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea
     })
     var temp=JSON.stringify(this.data.userxx)
     wx.navigateTo({

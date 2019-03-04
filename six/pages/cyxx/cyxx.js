@@ -6,11 +6,6 @@ Page({
    */
   data: {
     userxx:[
-      {
-        username: '黄巍峰',
-        phone: '18589080157',
-        address: '广东省广州市海珠区客村TIT创意园微信总部b4'
-      }
     ]
   },
   bj:function(e){
@@ -38,11 +33,13 @@ Page({
    */
   onLoad: function (options) {
     var data = JSON.parse(options.data)
-    // this.setData({
-    //   userxx:data
-    // })
-    let userxx=this.data.username
+
+    let userxx=this.data.userxx||[]
     userxx.unshift(data)
+    console.log(userxx)
+    this.setData({
+      userxx:userxx
+    })
   },
 
   /**
