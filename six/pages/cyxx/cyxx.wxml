@@ -1,9 +1,9 @@
 <!--pages/cyxx/cyxx.wxml-->
 <import src="/pages/cyxx-item/cyxx-item.wxml"/>
 
-<block wx:for="{{userxx}}" wx:for-item="item" wx:for-index="idx" wx:key="item.index">
-<view  catchtap="Tap" data-id='{{item.id}}'>
-<template is="cyxxItem" data="{{...item}}"/>
+<block wx:for="{{userxx}}" wx:for-item="item" wx:for-index="idx" wx:key="item">
+<view data-postid='{{item.username}}' catchtap="Tap">
+<template is="cyxxItem"  data="{{...item}}"/>
 </view>
 </block>
 

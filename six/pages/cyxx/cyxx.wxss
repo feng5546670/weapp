@@ -8,7 +8,6 @@
   margin-top: 30rpx;
   background: #40E0D0;
   border-radius: 40rpx;
-
 }
 .t2{
   display: inline;

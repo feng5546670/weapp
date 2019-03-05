@@ -9,22 +9,11 @@ Page({
     hasUserInfo: false,
   },
   getUserInfo:function(e){
-    wx.cloud.callFunction({
-      name: 'login',
-      data: {},
-      success: res => {
-        console.log(res.result.openid)
-        app.globalData.openid = res.result.openid
-      }
-      
-    })
-
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-   
   },
   shezhi:function(){
     wx.navigateTo({

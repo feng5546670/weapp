@@ -17,31 +17,36 @@ Page({
     })
   },
   formSubmit: function (e) {
-    // console.log(e.detail.value.picker)
-    // const db=wx.cloud.database()
-    // db.collection('userdata').add({
-    //   data:{
-    //     name:e.detail.value.username,
-    //     phone: e.detail.value.phone,
-    //     address: e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea,
-    //   },
-    //   success:(res)=>{
-    //     console.log(res)
-    //     wx.navigateTo({
-    //       url: '/pages/cyxx/cyxx',
-    //     })
-    //   }
+    // 上传到云函数
+    const db=wx.cloud.database()
+    db.collection('userdata').add({
+      data:{
+        name:e.detail.value.username,
+        phone: e.detail.value.phone,
+        address: e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea,
+      },
+      success:(res)=>{
+        console.log(res)
+        wx.navigateTo({
+          url: '/pages/cyxx/cyxx',
+        })
+      }
+    })
+  
+
+    // 传递数据
+    // this.setData({
+    //   'userxx.username':e.detail.value.username,
+    //   'userxx.phone':e.detail.value.phone,
+    //   'userxx.address': e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea
     // })
-    // var username = "userxx[" + 0 + "].username";
-    this.setData({
-      'userxx.username':e.detail.value.username,
-      'userxx.phone':e.detail.value.phone,
-      'userxx.address': e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea
-    })
-    var temp=JSON.stringify(this.data.userxx)
-    wx.navigateTo({
-      url: '/pages/cyxx/cyxx?data='+temp,
-    })
+    // var temp=JSON.stringify(this.data.userxx)
+    // wx.navigateTo({
+    //   url: '/pages/cyxx/cyxx?data='+temp,
+    // })
+
+
+
   },
   /**
    * 生命周期函数--监听页面加载

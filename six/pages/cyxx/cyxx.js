@@ -1,12 +1,13 @@
 // pages/cyxx/cyxx.js
+var userxx =  []
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userxx:[
-    ]
+    userxx:'',
+    openid:''
   },
   bj:function(e){
     console.log(e)
@@ -16,6 +17,9 @@ Page({
   },
   Tap:function(e){
     console.log("Tap",e)
+  },
+  de:function(e){
+
   },
   tjdz:function(e){
 
@@ -32,14 +36,48 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var data = JSON.parse(options.data)
 
-    let userxx=this.data.userxx||[]
-    userxx.unshift(data)
-    console.log(userxx)
-    this.setData({
-      userxx:userxx
+    //接收数据
+    // if(options.data){
+    //   var data = JSON.parse(options.data)
+    //   userxx.unshift(data)
+    //   console.log(userxx)
+    //   this.setData({
+    //     userxx: userxx
+    //   })
+    // }
+
+    //查询openid
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        this.setData({
+          openid: res.result.openid
+        })
+        console.log(this.data.openid)
+      }
     })
+
+
+    //查询云函数
+    const db = wx.cloud.database()
+    db.collection('userdata').where({
+      _openid: this.data.openid
+    }).get({
+      success: res => {
+        console.log(res.data)
+        this.setData({
+          userxx:res.data
+        })
+      }
+    })
+
+
+
+
+
+
   },
 
   /**
