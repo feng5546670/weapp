@@ -16,10 +16,10 @@ Page({
     })
   },
   Tap:function(e){
-    console.log("Tap",e)
+    // console.log("Tap",e)
   },
   de:function(e){
-
+    console.log(e)
   },
   tjdz:function(e){
 
@@ -55,7 +55,7 @@ Page({
         this.setData({
           openid: res.result.openid
         })
-        console.log(this.data.openid)
+        // console.log(this.data.openid)
       }
     })
 
@@ -66,7 +66,7 @@ Page({
       _openid: this.data.openid
     }).get({
       success: res => {
-        console.log(res.data)
+        // console.log(res.data)
         this.setData({
           userxx:res.data
         })

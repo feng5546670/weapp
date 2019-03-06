@@ -13,7 +13,7 @@
 <view class='bj' bindtap='bj'>
 <image src='/images/i01.png'></image>
 编辑</view>
-<view class='de' bindtap='de'>
+<view class='de' bindtap='de' >
 <image src='/images/i01.png'></image>
 删除</view>
 </view>
