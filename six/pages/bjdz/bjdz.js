@@ -7,8 +7,8 @@ Page({
    */
   data: {
     region: ['请选择', '请选择', '请选择'],
-    userxx:{
-    }
+    userxx:{},
+    ua:{}
   },
   bindRegionChange: function (e) {
     // console.log('picker发送选择改变，携带值为', e.detail.value[0] + e.detail.value[1] + e.detail.value[2])
@@ -24,6 +24,8 @@ Page({
         name:e.detail.value.username,
         phone: e.detail.value.phone,
         address: e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea,
+        region: e.detail.value.picker,
+        textarea: e.detail.value.textarea
       },
       success:(res)=>{
         console.log(res)
@@ -52,6 +54,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (options.data){
+      var data = JSON.parse(options.data)
+      this.setData({
+        userxx: data
+      })
+      this.setData({
+        region:this.data.userxx.region
+      })
+      console.log(this.data.userxx.textarea)
+    }
+   
   },
 
   /**

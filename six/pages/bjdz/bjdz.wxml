@@ -3,10 +3,10 @@
 
 <view class='bjs'>
 <view class='bj'> <text>联系人</text> 
-<input name='username' placeholder="您的名字"></input>
+<input name='username' placeholder="您的名字" value='{{userxx.name}}'></input>
 </view>
 
-<view class='bj'><text space="emsp">电 话</text> <input name='phone' placeholder="您的电话"></input>
+<view class='bj'><text space="emsp">电 话</text> <input name='phone' placeholder="您的电话" value='{{userxx.phone}}'></input>
 </view>
 
 
@@ -18,7 +18,7 @@
   </picker>
 </view>
 
-<view class='xx' name='address'><view>详细地址</view> <textarea auto-focus="true" name="textarea" class='xxdz' />
+<view class='xx' name='address'><view>详细地址</view> <textarea auto-focus="true" name="textarea" value='{{userxx.textarea}}' class='xxdz' />
 </view>
 </view>
 

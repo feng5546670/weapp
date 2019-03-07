@@ -10,7 +10,7 @@
 
 
 <view class='zu' wx:for="{{userxx}}" wx:for-item="item" wx:for-index="idx" wx:key="item">
-<view class='un'>{{item.username}} 
+<view class='un'>{{item.name}} 
 <view class='us'>{{item.phone}}</view>
 </view>
 <view class='ad'>{{item.address}}</view>
@@ -20,7 +20,7 @@
 <image src='/images/i01.png'></image>
 默认
 </view>
-<view class='bj' bindtap='bj'>
+<view class='bj' bindtap='bj' data-id='{{idx}}'>
 <image src='/images/i01.png'></image>
 编辑</view>
 <view class='de' bindtap='de' data-id='{{idx}}'>

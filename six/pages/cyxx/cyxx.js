@@ -6,22 +6,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    address
-      :
-      "河北省秦皇岛市抚宁区天涯海角",
-    name
-      :
-      "黄孔明",
-    phone
-      :
-      "18589080157", 
     userxx:'',
     openid:'',
     id:'',
   },
   bj:function(e){
+    var id = e.currentTarget.dataset.id
+    var ux = JSON.stringify(this.data.userxx[id])
+
     wx.navigateTo({
-      url: '/pages/bjdz/bjdz',
+      url: '/pages/bjdz/bjdz?data='+ux,
     })
   },
   Tap:function(e){
@@ -30,7 +24,29 @@ Page({
     // })
   },
   de:function(e){
-    console.log(e.currentTarget.dataset.id)
+    //删除云函数
+    wx.showModal({
+      title: '提示',
+      content: '确定删除?',
+      complete:  (res)=> {
+        if(res.confirm){
+          var id = e.currentTarget.dataset.id
+          var _id = this.data.userxx[id]._id
+          const db = wx.cloud.database()
+          db.collection('userdata').doc(_id).remove({
+            success: res => {
+              // console.log(res)
+              this.onLoad()
+            }
+          })
+        }
+      }
+    })
+
+
+
+
+
   },
   tjdz:function(e){
 
