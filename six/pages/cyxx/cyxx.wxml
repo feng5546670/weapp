@@ -1,11 +1,36 @@
 <!--pages/cyxx/cyxx.wxml-->
-<import src="/pages/cyxx-item/cyxx-item.wxml"/>
 
+<!-- <import src="/pages/cyxx-item/cyxx-item.wxml"/>
 <block wx:for="{{userxx}}" wx:for-item="item" wx:for-index="idx" wx:key="item">
 <view data-id='{{idx}}' catchtap="Tap">
 <template is="cyxxItem"  data="{{...item}}"/>
 </view>
-</block>
+</block> -->
+
+
+
+<view class='zu' wx:for="{{userxx}}" wx:for-item="item" wx:for-index="idx" wx:key="item">
+<view class='un'>{{item.username}} 
+<view class='us'>{{item.phone}}</view>
+</view>
+<view class='ad'>{{item.address}}</view>
+
+<view class='cd'>
+<view class='mr'>
+<image src='/images/i01.png'></image>
+默认
+</view>
+<view class='bj' bindtap='bj'>
+<image src='/images/i01.png'></image>
+编辑</view>
+<view class='de' bindtap='de' data-id='{{idx}}'>
+<image src='/images/i01.png'></image>
+删除</view>
+</view>
+</view>
+
+
+
 
 
 <view class='t1' bindtap='tjdz'><view class='t2'>+</view>

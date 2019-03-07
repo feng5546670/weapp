@@ -1,5 +1,53 @@
 /* pages/cyxx/cyxx.wxss */
-@import "/pages/cyxx-item/cyxx-item.wxss";
+/* @import "/pages/cyxx-item/cyxx-item.wxss"; */
+
+page{
+   background-color: #abcdef;
+}
+.zu{
+  height: 350rpx;
+  background-color: white;
+  margin-bottom: 20rpx;
+}
+.un{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 40rpx;
+}
+.ad{
+  margin: 0 40rpx; 
+  color:#2F4F4F;
+  padding-bottom: 40rpx;
+  border-bottom: 3rpx solid #abcdef;
+}
+
+.cd{
+  display: flex;
+  margin: 30rpx 40rpx;
+  align-items: center;
+}
+.mr{
+  display: flex;
+  align-items: center;
+}
+.bj{
+  display: flex;
+  align-items: center;
+  margin-left: 250rpx;
+}
+.de{
+  display: flex;
+  align-items: center;
+  margin-left: 40rpx;
+}
+.cd image{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+
+
 .t1{
   padding: 15rpx;
   margin: auto;

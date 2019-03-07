@@ -6,20 +6,31 @@ Page({
    * 页面的初始数据
    */
   data: {
+    address
+      :
+      "河北省秦皇岛市抚宁区天涯海角",
+    name
+      :
+      "黄孔明",
+    phone
+      :
+      "18589080157", 
     userxx:'',
-    openid:''
+    openid:'',
+    id:'',
   },
   bj:function(e){
-    console.log(e)
     wx.navigateTo({
       url: '/pages/bjdz/bjdz',
     })
   },
   Tap:function(e){
-    // console.log("Tap",e)
+    // this.setData({
+    //   id: e.currentTarget.dataset.id
+    // })
   },
   de:function(e){
-    console.log(e)
+    console.log(e.currentTarget.dataset.id)
   },
   tjdz:function(e){
 
@@ -66,14 +77,14 @@ Page({
       _openid: this.data.openid
     }).get({
       success: res => {
-        // console.log(res.data)
+        console.log(res.data)
         this.setData({
           userxx:res.data
         })
       }
     })
 
-
+  
 
 
 
