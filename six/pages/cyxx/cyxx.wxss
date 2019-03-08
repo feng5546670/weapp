@@ -34,7 +34,7 @@ page{
 .bj{
   display: flex;
   align-items: center;
-  margin-left: 250rpx;
+  margin-left: 170rpx;
 }
 .de{
   display: flex;

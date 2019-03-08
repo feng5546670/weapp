@@ -16,9 +16,9 @@
 <view class='ad'>{{item.address}}</view>
 
 <view class='cd'>
-<view class='mr'>
-<image src='/images/i01.png'></image>
-默认
+<view class='mr' bindtap='mr' data-id='{{idx}}'>
+<image src='{{item.src}}'></image>
+{{item.text}}
 </view>
 <view class='bj' bindtap='bj' data-id='{{idx}}'>
 <image src='/images/i01.png'></image>

@@ -6,15 +6,16 @@ Page({
    * 页面的初始数据
    */
   data: {
+    src:'/images/i01.png',
     userxx:'',
     openid:'',
-    id:'',
+    // id:'',
   },
   bj:function(e){
     var id = e.currentTarget.dataset.id
     var ux = JSON.stringify(this.data.userxx[id])
 
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/bjdz/bjdz?data='+ux,
     })
   },
@@ -22,6 +23,63 @@ Page({
     // this.setData({
     //   id: e.currentTarget.dataset.id
     // })
+  },
+  mr:function(e){
+  
+    var id = e.currentTarget.dataset.id
+    console.log(id)
+    var text = "userxx[" + id + "].text"
+    var src = "userxx[" + id + "].src"
+    var mr = "userxx[" + id + "].mr"
+    var _id=this.data.userxx[id]._id
+    
+    if(this.data.mr){
+      this.setData({
+        [src]:'/images/i01.png',
+        [text]: '设置默认',
+        [mr]:false
+      })
+      console.log(this.data.userxx)
+      const db = wx.cloud.database()
+      db.collection('userdata').doc(_id).update({
+        data: {
+          src: this.data.userxx.src,
+          text: this.data.userxx.text,
+          mr: this.data.userxx.src
+        },
+        success: (res) => {
+          console.log(res)
+          this.onLoad()
+        }
+      })
+
+    } else{
+      this.setData({
+        [src]: '/images/i02.png',
+        [text]: '默认',
+        [mr]: true
+      })
+      const db = wx.cloud.database()
+      db.collection('userdata').doc(_id).update({
+        data: {
+          src: this.data.userxx.src,
+          text: this.data.userxx.text,
+          mr:this.data.userxx.mr
+        },
+        success: (res) => {
+          console.log(res)
+          this.onLoad()
+        }
+      })
+      console.log(this.data.userxx)
+    }
+
+
+
+
+
+
+    
   },
   de:function(e){
     //删除云函数
@@ -50,7 +108,7 @@ Page({
   },
   tjdz:function(e){
 
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/bjdz/bjdz',
     })
     // wx.chooseAddress({

@@ -8,7 +8,7 @@ Page({
   data: {
     region: ['请选择', '请选择', '请选择'],
     userxx:{},
-    ua:{}
+    isqd:false
   },
   bindRegionChange: function (e) {
     // console.log('picker发送选择改变，携带值为', e.detail.value[0] + e.detail.value[1] + e.detail.value[2])
@@ -17,23 +17,57 @@ Page({
     })
   },
   formSubmit: function (e) {
-    // 上传到云函数
-    const db=wx.cloud.database()
-    db.collection('userdata').add({
-      data:{
-        name:e.detail.value.username,
-        phone: e.detail.value.phone,
-        address: e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea,
-        region: e.detail.value.picker,
-        textarea: e.detail.value.textarea
-      },
-      success:(res)=>{
-        console.log(res)
-        wx.navigateTo({
-          url: '/pages/cyxx/cyxx',
-        })
-      }
-    })
+     if(this.data.isqd){
+       //更新云函数
+       const db = wx.cloud.database()
+       db.collection('userdata').doc(this.data.userxx._id).update({
+         data: {
+           name: e.detail.value.username,
+           phone: e.detail.value.phone,
+           address: e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea,
+           region: e.detail.value.picker,
+           textarea: e.detail.value.textarea
+         },
+         success: (res) => {
+           console.log(res)
+           this.setData({
+             isqd: false
+           })
+           wx.redirectTo({
+             url: '/pages/cyxx/cyxx',
+           })
+       
+         }
+       })
+
+
+
+     } else{
+       // 上传到云函数
+       const db = wx.cloud.database()
+       db.collection('userdata').add({
+         data: {
+           name: e.detail.value.username,
+           phone: e.detail.value.phone,
+           address: e.detail.value.picker[0] + e.detail.value.picker[1] + e.detail.value.picker[2] + e.detail.value.textarea,
+           region: e.detail.value.picker,
+           textarea: e.detail.value.textarea,
+           src:"/images/i01.png",
+           text:'设置默认'
+         },
+         success: (res) => {
+           console.log(res)
+           wx.redirectTo({
+             url: '/pages/cyxx/cyxx',
+           })
+         }
+       })
+     }
+
+
+
+
+
   
 
     // 传递数据
@@ -57,12 +91,11 @@ Page({
     if (options.data){
       var data = JSON.parse(options.data)
       this.setData({
-        userxx: data
+        userxx: data,
+        region:data.region,
+        isqd:true
       })
-      this.setData({
-        region:this.data.userxx.region
-      })
-      console.log(this.data.userxx.textarea)
+      console.log(this.data.userxx)
     }
    
   },
