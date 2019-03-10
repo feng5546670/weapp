@@ -15,7 +15,16 @@
       <view class='name'>{{item.name}}</view>
     </view>
   </view>
-  <view>
+  <view class='wxsb'>
+  <view class='wxs'>
+    <!-- <view>
     热门维修
+  </view> -->
+
+    <view wx:for="{{wx}}" wx:for-item="item" wx:for-index="idx" data-id='idx' wx:key="idx" class='wx'>
+    {{item}}
+    </view>
+ 
   </view>
+</view>
 </scroll-view>

@@ -32,46 +32,84 @@ Page({
     var src = "userxx[" + id + "].src"
     var mr = "userxx[" + id + "].mr"
     var _id=this.data.userxx[id]._id
-    
-    if(this.data.mr){
+    //动态改变默认
+    if(this.data.userxx[id].mr){
       this.setData({
         [src]:'/images/i01.png',
         [text]: '设置默认',
         [mr]:false
       })
-      console.log(this.data.userxx)
       const db = wx.cloud.database()
       db.collection('userdata').doc(_id).update({
         data: {
-          src: this.data.userxx.src,
-          text: this.data.userxx.text,
-          mr: this.data.userxx.src
+          src: this.data.userxx[id].src,
+          text: this.data.userxx[id].text,
+          mr: this.data.userxx[id].mr
         },
         success: (res) => {
           console.log(res)
           this.onLoad()
         }
       })
-
     } else{
-      this.setData({
-        [src]: '/images/i02.png',
-        [text]: '默认',
-        [mr]: true
-      })
-      const db = wx.cloud.database()
-      db.collection('userdata').doc(_id).update({
-        data: {
-          src: this.data.userxx.src,
-          text: this.data.userxx.text,
-          mr:this.data.userxx.mr
-        },
-        success: (res) => {
-          console.log(res)
-          this.onLoad()
-        }
-      })
-      console.log(this.data.userxx)
+     var ul = this.data.userxx.length
+     for (var  i=0;i<ul;i++){
+      //  if(i==id){
+      //    continue ;
+      //  }
+       var text = "userxx[" + i + "].text"
+       var src = "userxx[" + i + "].src"
+       var mr = "userxx[" + i + "].mr"
+       var _i = this.data.userxx[i]._id
+       this.setData({
+         [src]: '/images/i01.png',
+         [text]: '设置默认',
+         [mr]: false
+       })
+       console.log(this.data.userxx[i].src, this.data.userxx[i].text, this.data.userxx[i].mr)
+       const db = wx.cloud.database()
+       db.collection('userdata').doc(_i).update({
+         data: {
+           src: this.data.userxx[i].src,
+           text: this.data.userxx[i].text,
+           mr: this.data.userxx[i].mr
+         },
+         complete: (res) => {
+           console.log(res)
+           this.onLoad()
+         }
+       })
+      console.log(i)
+     }
+setTimeout(()=>{
+
+
+        this.setData({
+          [src]: '/images/i02.png',
+          [text]: '默认',
+          [mr]: true
+        })
+        console.log(_id)
+
+        const db = wx.cloud.database()
+        db.collection('userdata').doc(_id).update({
+          data: {
+            src: this.data.userxx[id].src,
+            text: this.data.userxx[id].text,
+            mr: this.data.userxx[id].mr
+          },
+          complete: (res) => {
+            console.log(res)
+            this.onLoad()
+          }
+        })
+},5000)
+
+
+     
+
+
+  
     }
 
 
@@ -155,6 +193,7 @@ Page({
         this.setData({
           userxx:res.data
         })
+        // console.log(this.data.userxx.length)
       }
     })
 

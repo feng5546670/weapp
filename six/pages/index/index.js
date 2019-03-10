@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    wx:['甲醛维修','其它问题','开锁换锁','家电清洗','美边美缝','美缝美角','家庭美缝','油漆墙面'],
     imgUrls: [
       'https://hartfeng-d1e6c9.tcb.qcloud.la/0e634e975705a6326a8ae7fc833760c7.jpg?sign=6415af020d02187f6cb4de67ada4f81a&t=1551167389',
       'https://hartfeng-d1e6c9.tcb.qcloud.la/0e634e975705a6326a8ae7fc833760c7.jpg?sign=6415af020d02187f6cb4de67ada4f81a&t=1551167389',

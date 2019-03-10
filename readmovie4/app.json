@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/posts/posts",
+    "pages/movies/movies",
+    "pages/posts/post-detail/post-detail"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/welcome/welcome",
+        "text": "welcome"
+      },
+      {
+        "pagePath": "pages/welcome/welcome",
+        "text": "posts"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小程序",
+    "backgroundColor": "#405f80",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}
